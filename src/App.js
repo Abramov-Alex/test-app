@@ -138,6 +138,12 @@ function App() {
     // check(numberArray, 'ceil')
     // check(numberArray, 'floor')
 
+    // const cars = ['Honda', 'Mazda', 'Audi', 'Ford']
+    // const upperCars = cars.map(car => {
+    //     return car.toUpperCase()
+    // })
+    // console.log(upperCars)
+
     return (
         <>
 
