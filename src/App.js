@@ -144,6 +144,46 @@ function App() {
     // })
     // console.log(upperCars)
 
+    // const randomArray = new Array(10);
+    // function check(from, to, rand) {
+    //     for (let i = 0; i < rand.length; i++) {
+    //         rand[i] = Math.floor((Math.random() * (to - from + 1)) + from);
+    //         console.log(rand[i])
+    //     }
+    //     console.log(rand)
+    // }
+    // check(40, 50, randomArray)
+
+    // const date = new Date()
+    // const date2 = new Date(1000 * 60 * 60 * 24);
+    // let hours = date.getHours()
+    // if (hours < 10) {
+    //     hours = '0' + hours
+    // }
+    // let minutes = date.getMinutes()
+    // if (minutes < 10) {
+    //     minutes = '0' + minutes
+    // }
+    // let seconds = date.getSeconds()
+    // if (seconds < 10) {
+    //     seconds = '0' + seconds
+    // }
+    // console.log(`${hours}:${minutes}:${seconds}`)
+    // console.log(date)
+    // console.log(date2)
+
+    //------------------------------------------------------------------------
+
+    // const arr = ['1', '3', '2', '4']
+    // const res = arr.map((el) => parseInt(el)).filter((num) => num % 2)
+    // console.log(res)
+    // console.log(arr)
+
+    const arr = ['1', '3', '2', '4']
+    for (let num in arr) {
+        console.log(num)
+    }
+
     return (
         <>
 
