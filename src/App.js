@@ -179,13 +179,21 @@ function App() {
     // console.log(res)
     // console.log(arr)
 
-    const arr = ['1', '3', '2', '4']
-    for (let num in arr) {
-    const elem = num.fi
-        console.log(num)
-    }
-    const res = arr.map((el) => parseInt(el)).filter((numb) => (numb%2))
-    console.log(res)
+    // const arr = ['1', '3', '2', '4']
+    // for (let num in arr) {
+    // const elem = num.fi
+    //     console.log(num)
+    // }
+    // const res = arr.map((el) => parseInt(el)).filter((numb) => (numb%2))
+    // console.log(res)
+
+    // const dict = {
+    //     duck: 'quack',
+    //     dog: 'wuff',
+    //     mouse: 'squick'
+    // };
+    // const {duck, ...other} = dict;
+    // console.log(other)
 
     return (
         <>
