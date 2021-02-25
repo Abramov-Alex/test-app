@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchPanel = () => {
     return (
-        <input placeholder='search'/>
+        <input className="form-control" placeholder='search'/>
     );
 };
 

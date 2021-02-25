@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.myGroup {
+  width: 100%;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.result {
+  margin-top: 15px;
+}
