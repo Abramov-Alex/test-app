@@ -207,6 +207,40 @@ function App() {
     // const {duck, ...other} = dict;
     // console.log(other)
 
+    // function Animal(name, voice) {
+    //     this.name = name;
+    //     this.voice = voice;
+    // }
+    // Animal.prototype.say = function () {
+    //     console.log(this.name, 'say', this.voice);
+    // }
+    // const dog = new Animal('dog', 'woof');
+    // const cat = new Animal('cat', 'meow');
+    // dog.say();
+    // cat.say();
+
+    // class Animal {
+    //     constructor(name, voice) {
+    //         this.name = name;
+    //         this.voice = voice;
+    //     }
+    //     say() {
+    //         console.log(this.name, 'say', this.voice);
+    //     }
+    // }
+    // class Bird extends Animal {
+    //     constructor(name, voice, canFly) {
+    //         super(name, voice);
+    //         this.canFly = canFly;
+    //     }
+    // }
+    // const dog = new Animal('dog', 'woof');
+    // const cat = new Animal('cat', 'meow');
+    // const duck = new Animal('duck', 'quack', true);
+    // dog.say();
+    // cat.say();
+    // duck.say();
+
 
     return (
         <>
