@@ -1,6 +1,6 @@
 import './App.css';
 
-function App() {
+function AppJS() {
 
     // let cars = ['Audi', 'Ford', 'Mazda', 'Honda']
     // let speed = [100, 150, 200, 250]
@@ -98,37 +98,37 @@ function App() {
     // }
     // numberReplace()
 
-    // const randSimbol = ["Молоко", 77, 11, "Мед", -88];
-    // function check(randSimbol) {
-    //     for (let i = 0; i < randSimbol.length; i++) {
-    //         if (isNaN(randSimbol[i])) {
-    //             console.log(`${randSimbol[i]} - строка`)
+    // const randSymbol = ["Молоко", 77, 11, "Мед", -88];
+    // function check(randSymbol) {
+    //     for (let i = 0; i < randSymbol.length; i++) {
+    //         if (isNaN(randSymbol[i])) {
+    //             console.log(`${randSymbol[i]} - строка`)
     //         } else {
-    //             console.log(`${randSimbol[i]} - число`)
+    //             console.log(`${randSymbol[i]} - число`)
     //         }
     //     }
     // }
-    // check(randSimbol)
+    // check(randSymbol)
 
-    // const randSimbol = [10.5, 15, 112, 77.6];
+    // const randSymbol = [10.5, 15, 112, 77.6];
     // function check() {
-    //     for (let i = 0; i < randSimbol.length; i++) {
-    //         randSimbol[i] = randSimbol[i].toFixed(2)
-    //         console.log(randSimbol[i])
+    //     for (let i = 0; i < randSymbol.length; i++) {
+    //         randSymbol[i] = randSymbol[i].toFixed(2)
+    //         console.log(randSymbol[i])
     //     };
     // }
     // check()
 
     // const numberArray = [34.82, 12.90, 17.01, 78.51];
-    // function check(numberArray, metod) {
+    // function check(numberArray, method) {
     //     for (let i = 0; i < numberArray.length; i++) {
-    //         if (metod === 'round') {
+    //         if (method === 'round') {
     //             numberArray[i] = Math.round(numberArray[i])
     //             console.log(numberArray[i])
-    //         } else if (metod === 'ceil') {
+    //         } else if (method === 'ceil') {
     //             numberArray[i] = Math.round(numberArray[i])
     //             console.log(numberArray[i])
-    //         } else if (metod === 'floor') {
+    //         } else if (method === 'floor') {
     //             numberArray[i] = Math.round(numberArray[i])
     //             console.log(numberArray[i])
     //         }
@@ -201,8 +201,8 @@ function App() {
 
     // const dict = {
     //     duck: 'quack',
-    //     dog: 'wuff',
-    //     mouse: 'squick'
+    //     dog: 'woff',
+    //     mouse: 'quack'
     // };
     // const {duck, ...other} = dict;
     // console.log(other)
@@ -249,4 +249,4 @@ function App() {
     );
 }
 
-export default App;
+export default AppJS;

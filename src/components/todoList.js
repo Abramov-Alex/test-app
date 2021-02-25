@@ -2,20 +2,20 @@ import React from "react";
 import './todoList.css'
 import TodoListItem from './todoListItem'
 
-const TodoList = ({ todos }) => {
+const TodoList = ({todos}) => {
 
     const elements = todos.map((item) => {
-        const { id, ...itemProps } = item;
+        const {id, ...itemProps} = item;
         return (
             <li key={id} className="list-group-item">
-                <TodoListItem { ...itemProps } />
+                <TodoListItem {...itemProps} />
             </li>
         );
     });
 
     return (
         <ul className="list-group todoList">
-            { elements }
+            {elements}
         </ul>
     );
 };

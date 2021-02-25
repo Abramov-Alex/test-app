@@ -2,7 +2,7 @@ import React from "react";
 
 const AppHeader = () => {
     return (
-        <h1>My todo list</h1>
+        <h1>My to do list</h1>
     );
 };
 
