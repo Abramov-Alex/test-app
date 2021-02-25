@@ -181,11 +181,23 @@ function App() {
 
     // const arr = ['1', '3', '2', '4']
     // for (let num in arr) {
-    // const elem = num.fi
     //     console.log(num)
     // }
     // const res = arr.map((el) => parseInt(el)).filter((numb) => (numb%2))
     // console.log(res)
+
+    // function count(start = 10, end = 0) {
+    //     console.log(`Начиная с ${start} по ${end}`)
+    // }
+    // count(22, 11)
+
+    // const count = (start = 10, end = 0) => console.log(`Начиная с ${start} по ${end}`)
+    // count(22, 11)
+
+    // function max(a, b, ...numbers) {
+    //     console.log(a, b, numbers);
+    // }
+    // max(1, 2, 0, 3, 4);
 
     // const dict = {
     //     duck: 'quack',
