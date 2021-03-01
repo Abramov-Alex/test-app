@@ -22,12 +22,12 @@ class App extends Component {
 
     createTodoItem(label) {
         return {
-            label,
+            label: label,
             important: false,
             done: false,
             id: this.maxId++
-        }
-    }
+        };
+    };
 
     deleteItem = (id) => {
         this.setState(({todoData}) => {
@@ -52,23 +52,51 @@ class App extends Component {
         });
     };
 
-    onToggleImportant = (id) => {
-        console.log('hi', id);
+    onToggleDone = (id) => {
+        this.setState(({todoData}) => {
+            //update object
+            const index = todoData.findIndex((el) => el.id === id);
+            const oldItem = todoData[index];
+            const newItem = {...oldItem, done: !oldItem.done};
+
+            //new array
+            const newTodoData = [...todoData.slice(0, index), newItem, ...todoData.slice(index + 1)];
+
+            return {
+                todoData: newTodoData
+            }
+        })
     };
 
-    onToggleDone = (id) => {
-        console.log('hi', id);
+    onToggleImportant = (id) => {
+        this.setState(({todoData}) => {
+            //update object
+            const index = todoData.findIndex((el) => el.id === id);
+            const oldItem = todoData[index];
+            const newItem = {...oldItem, important: !oldItem.important};
+
+            //new array
+            const newTodoData = [...todoData.slice(0, index), newItem, ...todoData.slice(index + 1)];
+
+            return {
+                todoData: newTodoData
+            }
+        })
     };
 
     render() {
+
+        const doneCount = this.state.todoData.filter((el) => el.done).length;
+        const todoCount = this.state.todoData.length - doneCount;
+
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <AppHeader/>
+                        <AppHeader />
                     </div>
                     <div className="col-md-6">
-                        <h4 className="pull-right result">1 more to do, 3 done</h4>
+                        <h4 className="pull-right result">{todoCount} more to do, {doneCount} done</h4>
                     </div>
                 </div>
                 <div className="row">
@@ -98,7 +126,7 @@ class App extends Component {
             </div>
         );
     }
-};
+}
 
 ReactDOM.render(
     <App/>,
