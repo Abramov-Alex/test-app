@@ -4,8 +4,9 @@ import './index.css';
 import AppHeader from './components/appHeader'
 import SearchPanel from './components/searchPanel'
 import TodoList from './components/todoList'
-import ItemStatusFilter from "./components/itemStatusFilter";
-import AddButton from "./components/addButton";
+import ItemStatusFilter from './components/itemStatusFilter';
+import AddButton from './components/addButton';
+import TestJs from './components/testJs';
 // import AppJs from './App';
 
 class App extends Component {
@@ -126,6 +127,7 @@ class App extends Component {
 
         return (
             <div className="container">
+                <TestJs />
                 <div className="row">
                     <div className="col-md-6">
                         <AppHeader />
