@@ -6,6 +6,7 @@ import SearchPanel from './components/searchPanel'
 import TodoList from './components/todoList'
 import ItemStatusFilter from './components/itemStatusFilter';
 import AddButton from './components/addButton';
+import TestClassJs from './components/testClassJs';
 import TestJs from './components/testJs';
 // import AppJs from './App';
 
@@ -127,6 +128,7 @@ class App extends Component {
 
         return (
             <div className="container">
+                <TestClassJs />
                 <TestJs />
                 <div className="row">
                     <div className="col-md-6">

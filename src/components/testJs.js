@@ -24,7 +24,7 @@ console.log(num(3));
 const arr = ['1', '3', '2', '4'];
 console.log(arr)
 
-const res = arr.map((el) => parseInt(el)).filter((num) => num%2)
+const res = arr.map((el) => parseInt(el)).filter((num) => num % 2)
 console.log(res)
 
 const TestJs = () => {
