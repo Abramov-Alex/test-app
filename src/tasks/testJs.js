@@ -18,14 +18,14 @@ import React from "react";
 // user.age = 18;
 // console.log(user);
 
-const num = (x) => x * x;
-console.log(num(3));
-
-const arr = ['1', '3', '2', '4'];
-console.log(arr)
-
-const res = arr.map((el) => parseInt(el)).filter((num) => num % 2)
-console.log(res)
+// const num = (x) => x * x;
+// console.log(num(3));
+//
+// const arr = ['1', '3', '2', '4'];
+// console.log(arr)
+//
+// const res = arr.map((el) => parseInt(el)).filter((num) => num % 2)
+// console.log(res)
 
 const TestJs = () => {
     return (

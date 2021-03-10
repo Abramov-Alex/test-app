@@ -6,8 +6,8 @@ import SearchPanel from './components/searchPanel'
 import TodoList from './components/todoList'
 import ItemStatusFilter from './components/itemStatusFilter';
 import AddButton from './components/addButton';
-import TestClassJs from './components/testClassJs';
-import TestJs from './components/testJs';
+import TestClassJs from './tasks/testClassJs';
+import TestJs from './tasks/testJs';
 // import AppJs from './App';
 
 class App extends Component {
