@@ -57,38 +57,17 @@ import React, { Component } from "react";
 //
 //     render(){
 //
+//         const text = <p>{this.state.show ? 'Hello' : 'Cool'} {this.state.name}!</p>;
+//
 //         return(
 //             <>
-//                 <p>{this.state.show ? 'Hello' : 'Cool'} {this.state.name}!</p>
+//                 {text}
 //             </>
 //         )
 //     }
 // }
 
-export default class TestClassJs extends Component {
-
-    state = {
-        name: 'Alex',
-        age: 32,
-        show: false
-    }
-
-    showText = () => {
-        this.setState({show: true});
-    }
-
-    render() {
-
-        const text = <p>{this.state.show ? `${this.state.name} ${this.state.age}` : ''}</p>;
-
-        return <div>
-            {text}
-            <button onClick={this.showText}>
-                click
-            </button>
-        </div>;
-    }
-}
+// show or hide element
 
 // export default class TestClassJs extends Component {
 //
@@ -98,21 +77,43 @@ export default class TestClassJs extends Component {
 //         show: false
 //     }
 //
-//     change = () => {
-//         this.setState({show: true});
+//     showText = () => {
+//         this.setState({show: !this.state.show});
 //     }
 //
 //     render() {
 //
-//         if (this.state.show) {
-//             const text = <p>{this.state.name}{this.state.age}</p>
-//         }
+//         const text = <p>{this.state.show ? `${this.state.name} ${this.state.age}` : ''}</p>;
 //
-//         return(
-//             <>
-//                 {this.text}
-//                 <button onClick={this.change}>Click</button>
-//             </>
-//         )
+//         return <div>
+//             {text}
+//             <button onClick={this.showText}>
+//                 {this.state.show ? 'Hide' : 'Show'}
+//             </button>
+//         </div>;
 //     }
 // }
+
+// массив и цикл
+
+export default class TestClassJs extends Component {
+
+    state = {
+        names: ['Alex','Bob','Peter']
+    }
+
+    render() {
+
+        const li = this.state.names.map((name, id) => {
+            return (
+                <li key={id}>{name} - {id + 1}</li>
+            )
+        })
+
+        return(
+            <ul>
+                {li}
+            </ul>
+        )
+    }
+}
