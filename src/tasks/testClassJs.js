@@ -148,67 +148,96 @@ import React, { Component } from "react";
 
 // Добавить / удалить элемен
 
+// export default class TestClassJs extends Component {
+//
+//     state = {
+//         names: ['Коля', 'Вася', 'Петя', 'Иван', 'Дима']
+//     }
+//
+//     addLi = () => {
+//         this.setState(({names}) => {
+//             const newState = [
+//                 ...names,
+//                 'New'
+//             ]
+//             return (
+//                 {
+//                     names: newState
+//                 }
+//             )
+//         })
+//     }
+//
+//     deleteLi = () => {
+//         this.setState(({names}) => {
+//             const newState = [
+//                 ...names.slice(0, -1)
+//             ]
+//             return (
+//                 {
+//                     names: newState
+//                 }
+//             )
+//         })
+//     }
+//
+//     addItem = () => {
+//         this.state.names.push('New1');
+//         this.setState({names: this.state.names});
+//     }
+//
+//     deleteItem = (index) => {
+//         this.state.names.splice(index, 1)
+//         this.setState({names: this.state.names});
+//     }
+//
+//     render() {
+//
+//         const li = this.state.names.map((name, index) => {
+//             return(
+//                 <li key={index}>
+//                     {name}
+//                     <button onClick={this.deleteItem.bind(this, index)}>Delete</button>
+//                 </li>
+//             )
+//         })
+//
+//         return(
+//             <ul>
+//                 {li}
+//                 <button onClick={this.addLi}>Add</button>
+//                 <button onClick={this.addItem}>Add</button>
+//                 <button onClick={this.deleteLi}>Delete</button>
+//
+//             </ul>
+//         )
+//     }
+// }
+
 export default class TestClassJs extends Component {
 
     state = {
-        names: ['Коля', 'Вася', 'Петя', 'Иван', 'Дима']
+        text: ''
     }
 
-    addLi = () => {
-        this.setState(({names}) => {
-            const newState = [
-                ...names,
-                'New'
-            ]
-            return (
-                {
-                    names: newState
-                }
-            )
-        })
+    changeValue = (e) => {
+        this.setState({text: e.target.value})
     }
 
-    deleteLi = () => {
-        this.setState(({names}) => {
-            const newState = [
-                ...names.slice(0, -1)
-            ]
-            return (
-                {
-                    names: newState
-                }
-            )
-        })
-    }
-
-    addItem = () => {
-        this.state.names.push('New1');
-        this.setState({names: this.state.names});
-    }
-
-    deleteItem = (index) => {
-        this.state.names.splice(index, 1)
-        this.setState({names: this.state.names});
+    submitValue = (e) => {
+        this.setState({
+            text: e.target.value
+        });
+        e.preventDefault();
     }
 
     render() {
-
-        const li = this.state.names.map((name, index) => {
-            return(
-                <li key={index}>
-                    {name}
-                    <button onClick={this.deleteItem}>Delete</button>
-                </li>
-            )
-        })
-
         return(
-            <ul>
-                {li}
-                <button onClick={this.addLi}>Add</button>
-                <button onClick={this.addItem}>Add</button>
-                <button onClick={this.deleteLi}>Delete</button>
-            </ul>
+            <form onSubmit={this.submitValue}>
+                <p>{this.state.text}</p>
+                <input value={this.state.text} onChange={this.changeValue}/>
+                <button type='submit'>ok</button>
+            </form>
         )
     }
 }
