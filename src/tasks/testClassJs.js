@@ -96,23 +96,118 @@ import React, { Component } from "react";
 
 // массив и цикл
 
+// export default class TestClassJs extends Component {
+//
+//     state = {
+//         names: ['Alex','Bob','Peter']
+//     }
+//
+//     render() {
+//
+//         const li = this.state.names.map((name, id) => {
+//             return (
+//                 <li key={id}>{name} - {id + 1}</li>
+//             )
+//         })
+//
+//         return(
+//             <ul>
+//                 {li}
+//             </ul>
+//         )
+//     }
+// }
+
+// сложный массив и цикл
+
+// export default class TestClassJs extends Component {
+//
+//     state = {
+//         hrefs: [
+//             {href: '1.html', text: 'ссылка 1'},
+//             {href: '2.html', text: 'ссылка 2'},
+//             {href: '3.html', text: 'ссылка 3'},
+//         ]
+//     }
+//
+//     render() {
+//
+//         const li = this.state.hrefs.map((item, key) => {
+//             return(
+//                 <li key={key}><a href={item.href}>{item.text}</a></li>
+//             )
+//         })
+//
+//         return(
+//             <ul>
+//                 {li}
+//             </ul>
+//         )
+//     }
+// }
+
+// Добавить / удалить элемен
+
 export default class TestClassJs extends Component {
 
     state = {
-        names: ['Alex','Bob','Peter']
+        names: ['Коля', 'Вася', 'Петя', 'Иван', 'Дима']
+    }
+
+    addLi = () => {
+        this.setState(({names}) => {
+            const newState = [
+                ...names,
+                'New'
+            ]
+            return (
+                {
+                    names: newState
+                }
+            )
+        })
+    }
+
+    deleteLi = () => {
+        this.setState(({names}) => {
+            const newState = [
+                ...names.slice(0, -1)
+            ]
+            return (
+                {
+                    names: newState
+                }
+            )
+        })
+    }
+
+    addItem = () => {
+        this.state.names.push('New1');
+        this.setState({names: this.state.names});
+    }
+
+    deleteItem = (index) => {
+        this.state.names.splice(index, 1)
+        this.setState({names: this.state.names});
     }
 
     render() {
 
-        const li = this.state.names.map((name, id) => {
-            return (
-                <li key={id}>{name} - {id + 1}</li>
+        const li = this.state.names.map((name, index) => {
+            return(
+                <li key={index}>
+                    {name}
+                    <button onClick={this.deleteItem}>Delete</button>
+                </li>
             )
         })
 
         return(
             <ul>
                 {li}
+                <button onClick={this.addLi}>Add</button>
+                <button onClick={this.addItem}>Add</button>
+                <button onClick={this.deleteLi}>Delete</button>
             </ul>
         )
     }
