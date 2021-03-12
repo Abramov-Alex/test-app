@@ -225,9 +225,7 @@ export default class TestClassJs extends Component {
     }
 
     submitValue = (e) => {
-        this.setState({
-            text: e.target.value
-        });
+        alert('Text is: ' + this.state.text);
         e.preventDefault();
     }
 
